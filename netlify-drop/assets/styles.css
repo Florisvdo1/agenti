@@ -1,0 +1,31 @@
+:root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at top, #1c2545, #0b0f1d 45%); color: #eef2ff; }
+.layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+.sidebar { border-right: 1px solid #2b3355; padding: 1.2rem; background: rgba(8,12,28,.8); backdrop-filter: blur(6px); position: sticky; top: 0; height: 100vh; overflow: auto; }
+h1 { margin: 0; font-size: 1.6rem; }
+.subtitle { color: #a8b1d3; margin: .4rem 0 1rem; }
+nav { display: grid; gap: .45rem; }
+.nav-btn { background: #151c34; color: #d8def7; border: 1px solid #273055; border-radius: 12px; text-align: left; padding: .7rem .75rem; font-size: .88rem; }
+.nav-btn.active { background: #5166ff; color: #fff; border-color: #6d7dff; }
+.main { padding: 1.2rem; }
+section h2 { margin-top: 0; font-size: 1.35rem; }
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .7rem; margin-bottom: 1rem; }
+.kpis > div, .panel, .card, .row, .empty { background: #0f152d; border: 1px solid #2d3560; border-radius: 14px; padding: .8rem; }
+.kpis strong { font-size: 1.4rem; display: block; }
+.kpis span { color: #9aa4c9; font-size: .88rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: .7rem; }
+.card p, .row p { color: #a8b1d3; margin: .3rem 0; }
+.meta { color: #96b2ff; font-size: .85rem; }
+.panel { display: grid; gap: .6rem; margin-bottom: .8rem; }
+.two-col { grid-template-columns: repeat(2,minmax(0,1fr)); }
+input, textarea, select, button { border-radius: 10px; border: 1px solid #334070; background: #101938; color: #eaf0ff; padding: .65rem; font: inherit; }
+button { background: #2746ff; border-color: #4f69ff; cursor: pointer; }
+.list { display: grid; gap: .6rem; }
+.row { display: grid; grid-template-columns: 1fr auto auto; gap: .6rem; align-items: center; }
+.dim { opacity: .58; }
+.quad { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; }
+@media (max-width: 1024px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: relative; height: auto; }
+}
